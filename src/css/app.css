@@ -1,0 +1,13 @@
+.bpmn-icon-custom {
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.bpmn-icon-computer {
+    background-image: url('../assets/computer.png');
+}
+
+.bpmn-icon-endpoint {
+    background-image: url('../assets/endpoint.png');
+}
