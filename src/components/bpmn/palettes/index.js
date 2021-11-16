@@ -6,7 +6,7 @@ export const getCustomPalettes = function(createAction, translate) {
         ),
         'create.EndPointNode': createAction(
             'bpmn:EndPointNode', 'activity', 'bpmn-icon-custom bpmn-icon-endpoint',
-            translate('Create computer')
+            translate('Create endpoint')
         )
     }
 }

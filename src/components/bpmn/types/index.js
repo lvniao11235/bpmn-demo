@@ -1,4 +1,4 @@
-export var newTypes = [{
+export var customTypes = [{
     name: "ComputerNode",
     superClass: [
         "Activity",

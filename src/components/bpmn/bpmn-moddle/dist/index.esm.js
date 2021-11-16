@@ -1,7 +1,7 @@
 import { isString, assign } from 'min-dash';
 import { Moddle } from 'moddle';
 import { Reader, Writer } from 'moddle-xml';
-import { newTypes } from '@/components/bpmn/types'
+import { customTypes } from '@/components/bpmn/types'
 
 /**
  * A sub class of {@link Moddle} with support for import and export of BPMN 2.0 xml files.
@@ -2904,9 +2904,8 @@ var xml = {
     typePrefix: "t"
 };
 
-for (let i in newTypes) {
-    types.push(newTypes[i])
-}
+types = [...types, ...customTypes]
+
 var BpmnPackage = {
     name: name,
     uri: uri,

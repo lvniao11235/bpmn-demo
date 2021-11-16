@@ -12,7 +12,7 @@
 
 <script>
 import BpmnModeler from '@/components/bpmn/bpmn-js/lib/Modeler';
-const bpmnXml = require('@/components/bpmn/resources/default.diagram.bpmn')
+import defaultBpmn from '@/components/bpmn/resources/default.diagram.bpmn'
 import propertiesPanelModule from '@/components/bpmn/bpmn-js-properties-panel';
 import propertiesProviderModule from '@/components/bpmn/bpmn-js-properties-panel/lib/provider/camunda';
 import camundaModdleDescriptor from 'camunda-bpmn-moddle/resources/camunda.json';
@@ -41,60 +41,7 @@ export default {
         camunda: camundaModdleDescriptor
       }
     });
-    this.bpmnModeler.importXML(`<?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="sid-38422fae-e03e-43a3-bef4-bd33b32041b2" targetNamespace="http://bpmn.io/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
-  <process id="Process_1" isExecutable="false">
-    <computerNode id="Activity_09tv0mz" name="host">
-      <outgoing>Flow_02sqsuc</outgoing>
-      <outgoing>Flow_0sy7514</outgoing>
-      <outgoing>Flow_0ibsjeq</outgoing>
-    </computerNode>
-    <endPointNode id="Activity_0f8hwfy" name="endpoint2">
-      <incoming>Flow_02sqsuc</incoming>
-    </endPointNode>
-    <endPointNode id="Activity_1wyum05" name="endpoint1">
-      <incoming>Flow_0sy7514</incoming>
-    </endPointNode>
-    <endPointNode id="Activity_0tqn7ik" name="endpoint3">
-      <incoming>Flow_0ibsjeq</incoming>
-    </endPointNode>
-    <sequenceFlow id="Flow_02sqsuc" sourceRef="Activity_09tv0mz" targetRef="Activity_0f8hwfy" />
-    <sequenceFlow id="Flow_0sy7514" sourceRef="Activity_09tv0mz" targetRef="Activity_1wyum05" />
-    <sequenceFlow id="Flow_0ibsjeq" sourceRef="Activity_09tv0mz" targetRef="Activity_0tqn7ik" />
-  </process>
-  <bpmndi:BPMNDiagram id="BpmnDiagram_1">
-    <bpmndi:BPMNPlane id="BpmnPlane_1" bpmnElement="Process_1">
-      <bpmndi:BPMNEdge id="Flow_0ibsjeq_di" bpmnElement="Flow_0ibsjeq">
-        <omgdi:waypoint x="204" y="460" />
-        <omgdi:waypoint x="300" y="460" />
-        <omgdi:waypoint x="300" y="594" />
-        <omgdi:waypoint x="396" y="594" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0sy7514_di" bpmnElement="Flow_0sy7514">
-        <omgdi:waypoint x="204" y="460" />
-        <omgdi:waypoint x="300" y="460" />
-        <omgdi:waypoint x="300" y="344" />
-        <omgdi:waypoint x="396" y="344" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_02sqsuc_di" bpmnElement="Flow_02sqsuc">
-        <omgdi:waypoint x="204" y="460" />
-        <omgdi:waypoint x="406" y="460" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Activity_09tv0mz_di" bpmnElement="Activity_09tv0mz">
-        <omgdc:Bounds x="156" y="436" width="48" height="48" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1wyum05_di" bpmnElement="Activity_1wyum05">
-        <omgdc:Bounds x="396" y="316" width="48" height="48" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0tqn7ik_di" bpmnElement="Activity_0tqn7ik">
-        <omgdc:Bounds x="396" y="566" width="48" height="48" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0f8hwfy_di" bpmnElement="Activity_0f8hwfy">
-        <omgdc:Bounds x="406" y="436" width="48" height="48" />
-      </bpmndi:BPMNShape>
-    </bpmndi:BPMNPlane>
-  </bpmndi:BPMNDiagram>
-</definitions>`, err=>{
+    this.bpmnModeler.importXML(defaultBpmn, err=>{
       if(!err){
         const downloadLink = this.$refs.saveDiagram
         this.bpmnModeler.on('commandStack.changed', ()=> {
