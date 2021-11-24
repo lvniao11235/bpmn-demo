@@ -65,7 +65,7 @@ module.exports = function(group, element, bpmnFactory, translate) {
     // Element Documentation
     var elementDocuEntry = entryFactory.textBox(translate, {
         id: 'documentation',
-        label: translate('Element Documentation'),
+        label: translate('元素文档'),
         modelProperty: 'documentation'
     });
 

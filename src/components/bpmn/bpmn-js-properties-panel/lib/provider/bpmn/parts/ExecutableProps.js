@@ -19,7 +19,7 @@ module.exports = function(group, element, translate) {
 
         var executableEntry = entryFactory.checkbox(translate, {
             id: 'process-is-executable',
-            label: translate('Executable'),
+            label: translate('可执行'),
             modelProperty: 'isExecutable'
         });
 

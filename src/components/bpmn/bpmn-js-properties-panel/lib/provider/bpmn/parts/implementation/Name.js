@@ -15,19 +15,19 @@ var entryFactory = require('../../../../factory/EntryFactory');
  */
 module.exports = function(element, options, translate) {
 
-  options = options || {};
-  var id = options.id || 'name',
-      label = options.label || translate('Name'),
-      modelProperty = options.modelProperty || 'name';
+    options = options || {};
+    var id = options.id || 'name',
+        label = options.label || translate('标题'),
+        modelProperty = options.modelProperty || 'name';
 
-  var nameEntry = entryFactory.textBox(translate, {
-    id: id,
-    label: label,
-    modelProperty: modelProperty,
-    get: options.get,
-    set: options.set
-  });
+    var nameEntry = entryFactory.textBox(translate, {
+        id: id,
+        label: label,
+        modelProperty: modelProperty,
+        get: options.get,
+        set: options.set
+    });
 
-  return [ nameEntry ];
+    return [nameEntry];
 
 };

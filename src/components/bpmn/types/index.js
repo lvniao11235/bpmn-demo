@@ -10,4 +10,10 @@ export var customTypes = [{
         "Activity",
         "InteractionNode"
     ]
+}, {
+    name: "ChemistryNode",
+    superClass: [
+        "Activity",
+        "InteractionNode"
+    ]
 }]

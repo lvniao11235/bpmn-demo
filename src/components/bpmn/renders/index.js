@@ -6,5 +6,8 @@ export const getCustomRenders = function(customerRender) {
         'bpmn:EndPointNode': function(parentGfx, element) {
             return customerRender["drawImage"](parentGfx, element, require('@/assets/endpoint.png'))
         },
+        'bpmn:ChemistryNode': function(parentGfx, element) {
+            return customerRender["drawTemplate"](parentGfx, element, '加入<input type="text" value="水"><input type="text" value="5">ml', require('@/assets/chemistry-white.png'))
+        },
     }
 }

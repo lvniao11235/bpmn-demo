@@ -7,6 +7,10 @@ export const getCustomPalettes = function(createAction, translate) {
         'create.EndPointNode': createAction(
             'bpmn:EndPointNode', 'activity', 'bpmn-icon-custom bpmn-icon-endpoint',
             translate('Create endpoint')
+        ),
+        'create.ChemistryNode': createAction(
+            'bpmn:ChemistryNode', 'activity', 'bpmn-icon-custom bpmn-icon-chemistry',
+            translate('Create endpoint')
         )
     }
 }

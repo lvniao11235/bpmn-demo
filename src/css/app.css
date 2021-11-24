@@ -11,3 +11,44 @@
 .bpmn-icon-endpoint {
     background-image: url('../assets/endpoint.png');
 }
+
+.bpmn-icon-chemistry {
+    background-image: url('../assets/chemistry.png');
+}
+
+.bpmn-template-outer {
+    background-image: url('../assets/chemistry.png');
+}
+
+.bpp-properties-header {
+    display: none;
+}
+
+.bpmn-template-container {
+    background: linear-gradient(to top, #49823E, #63C242);
+    border-radius: 5px;
+}
+
+.bpmn-template-content {
+    background: white;
+    border-radius: 5px;
+    float: right;
+    height: 26px;
+    margin: 2px;
+    padding: 0px 10px;
+}
+
+.bpmn-template-icon {
+    margin-top: 2.5px;
+}
+
+.bpmn-template-content input {
+    background: #efefef;
+    outline: none;
+    border: none;
+    width: 30px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-align: center;
+    border-radius: 5px;
+}

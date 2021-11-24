@@ -32,7 +32,7 @@ function createGeneralTabGroups(
 
     var generalGroup = {
         id: 'general',
-        label: translate('General'),
+        label: translate('通用'),
         entries: []
     };
     idProps(generalGroup, element, translate, getIdOptions(element));
@@ -50,7 +50,7 @@ function createGeneralTabGroups(
 
     var documentationGroup = {
         id: 'documentation',
-        label: translate('Documentation'),
+        label: translate('文档'),
         entries: []
     };
 
@@ -73,7 +73,7 @@ function BpmnPropertiesProvider(
 
         var generalTab = {
             id: 'general',
-            label: translate('General'),
+            label: translate('通用'),
             groups: createGeneralTabGroups(
                 element, canvas, bpmnFactory, elementRegistry, translate)
         };

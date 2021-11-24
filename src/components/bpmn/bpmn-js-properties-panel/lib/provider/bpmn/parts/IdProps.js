@@ -13,7 +13,7 @@ module.exports = function(group, element, translate, options) {
     // Id
     group.entries.push(entryFactory.validationAwareTextField(translate, {
         id: options.id || 'id',
-        label: translate(options.label || 'Id'),
+        label: translate(options.label || '标识'),
         description: options.description && translate(options.description),
         modelProperty: 'id',
         getProperty: function(element) {

@@ -1847,6 +1847,35 @@ export default function BpmnRenderer(
             }
             return customIcon
         },
+        drawTemplate: function(parentGfx, element, template, imgUrl) {
+            var semantic = getSemantic(element);
+            var container = svgCreate('foreignObject');
+            svgAttr(container, {
+                x: 0,
+                y: 0,
+                width: 180,
+                height: 30,
+                class: 'bpmn-template-container'
+            });
+            const attr = { x: 0, y: 5, width: 25, height: 25 }
+            const customIcon = svgCreate('image', {
+                ...attr,
+                src: imgUrl
+            })
+            svgAttr(customIcon, {
+                class: 'bpmn-template-icon'
+            });
+            var content = svgCreate('div');
+            svgAttr(content, {
+                class: 'bpmn-template-content'
+            });
+            svgAppend(container, customIcon);
+            svgAppend(container, content);
+            svgAppend(parentGfx, container);
+            content.innerHTML = template
+            container.innerHTML = container.innerHTML.replaceAll("</input>", "").replace("</input>", "")
+            return container;
+        }
     }
 
     this.handlers = {...this.handlers, ...getCustomRenders(customerRender) }
