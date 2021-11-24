@@ -4,6 +4,26 @@
     background-position: center center;
 }
 
+.bpmn-icon-equipment1 {
+    background-image: url('../assets/equipment1.png');
+}
+
+.bpmn-icon-equipment2 {
+    background-image: url('../assets/equipment2.png');
+}
+
+.bpmn-icon-equipment3 {
+    background-image: url('../assets/equipment3.png');
+}
+
+.bpmn-icon-equipment4 {
+    background-image: url('../assets/equipment4.png');
+}
+
+.bpmn-icon-equipment5 {
+    background-image: url('../assets/equipment5.png');
+}
+
 .bpmn-icon-computer {
     background-image: url('../assets/computer.png');
 }
@@ -16,6 +36,14 @@
     background-image: url('../assets/chemistry.png');
 }
 
+.bpmn-icon-flask {
+    background-image: url('../assets/flask.png');
+}
+
+.bpmn-icon-stop {
+    background-image: url('../assets/suspend.png');
+}
+
 .bpmn-template-outer {
     background-image: url('../assets/chemistry.png');
 }
@@ -24,8 +52,18 @@
     display: none;
 }
 
-.bpmn-template-container {
+.bpmn-template-green {
     background: linear-gradient(to top, #49823E, #63C242);
+    border-radius: 5px;
+}
+
+.bpmn-template-black {
+    background: linear-gradient(to top, #4b4d4b, #141414);
+    border-radius: 5px;
+}
+
+.bpmn-template-yellow {
+    background: linear-gradient(to top, #7b823e, #afc242);
     border-radius: 5px;
 }
 
@@ -51,4 +89,12 @@
     margin-right: 1px;
     text-align: center;
     border-radius: 5px;
+}
+
+.bpmn-template-content img {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
 }

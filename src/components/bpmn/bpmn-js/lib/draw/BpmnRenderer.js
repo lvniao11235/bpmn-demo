@@ -1827,7 +1827,9 @@ export default function BpmnRenderer(
             return rect;
         },
         drawImage: function(parentGfx, element, imgUrl) {
-            const attr = { x: 0, y: 0, width: 48, height: 48 }
+            element.width = 120
+            element.height = 120
+            const attr = { x: 0, y: 0, width: 120, height: 120 }
             const customIcon = svgCreate('image', {
                 ...attr,
                 href: imgUrl
@@ -1847,15 +1849,17 @@ export default function BpmnRenderer(
             }
             return customIcon
         },
-        drawTemplate: function(parentGfx, element, template, imgUrl) {
+        drawTemplate: function(parentGfx, element, template, imgUrl, clazz = 'bpmn-template-container', width = 180) {
+            element.width = width
+            element.height = 30
             var semantic = getSemantic(element);
             var container = svgCreate('foreignObject');
             svgAttr(container, {
                 x: 0,
                 y: 0,
-                width: 180,
+                width: width,
                 height: 30,
-                class: 'bpmn-template-container'
+                class: clazz
             });
             const attr = { x: 0, y: 5, width: 25, height: 25 }
             const customIcon = svgCreate('image', {
